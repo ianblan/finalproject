@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>climate change</title>
+<link rel="stylesheet" href="climate_change.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body, html {
+  height: 100%;
+ }
+ .parallax {
+  /* The image used */
+  background-image: url('https://spacenews.com/wp-content/uploads/2021/04/AdobeStock_213664328-879x485.jpg');
+  
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+ #setting{
+  position: absolute;
+  left:1100px;
+  background-color: #333;
+  border: none;
+  color: white;
+ }
+ #setting2{
+  position: absolute;
+  left:1260px;
+  background-color: #333;
+  border: none;
+  color: white;
+ }
+
+ h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+ }
+
+ h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+ }
+
+ h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform .3s ease;
+ }
+
+ h1 {
+  position: relative;
+ }
+
+
+
+ body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+
+ }
+
+ @media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+ }
+
+ .gradient {
+  background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+
+</style>
+
+
+</head>
+
+<body>
+   
+    <div id="navbar">
+        <a class="active" href="climate_change.html">Home</a>
+        <a href="pollutions.html">Causes</a>
+        <a href="animals.html">Effects On Nature</a>
+        <a href="effect.html">Effects On Humanity</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="aboutus.html">About Us</a>
+        <!--<a href="piano.html">piano</a>-->
+        <button id="setting" onclick="setting()">dark-mode</button>
+      <button id="setting2" onclick="setting2()">light-mode</button>
+      </div>
+
+      <div class="content">
+
+        <div class="parallax"></div>
+
+        <div >
+    
+    <h1 align ="center" class="gradient">WHAT IS </h1>
+    <H1 align="center" class="gradient">  CLIMATE CHANGE?</H1>
+<br>
+<p align="center">Climate change is the change of the average conditions of the earth including things such as the average tempature,rainfall and the effects of global warming such as rising sea levels, and melting glaciers.  </p>
+<br>
+<figure>
+<img src="https://tse3.mm.bing.net/th?id=OIP.2KaWFTLZ3sxPdzA8RLo30AHaDt&pid=Api&P=0" class="all">
+<figcaption align="center">example of air pollution</figcaption>
+</figure>
+<h1 align="center">POLLUTION</h1>
+<br>
+<p align="center">Pollution is one of the main reasons for climate change as air pollution from coal burning releases carbon dioxide which is a green house gas which can trap the heat energy from the sun on earth which causes generally higher temptures for the earth overall which melts icebergs and raises the sea level </p>
+<br>
+<br>
+<h1 align="center">HOW TO REDUCE THE EFFECTS OF CLIMATE CHANGE</h1>
+<br>
+<p align="center">climate change is a serious issue that affects everyone and everything and as humans who are responsible for most of the damage we should attempt to save our planet so to help you could do a variety of things such as joining in a organization such as <a href="https://www.edf.org/">the enviormental defense fund</a> or maybe just donating a few bucks to said group or whichever you think is best and or just finding a local enviormental conservation group and joining in the effort. and im sorry if you read through this whole area maybe feeling inspired to help you can but at this point it is so miniscule what you are doing that the biggest decisions for climate change is not controlled by the people but by the goverments for which the people live in and the companys the people consume products from so although the future may look grim there is still hope for you and your actions having any imapct that is to try to organize other people with your cause to rally against the sheer irresponsibility to pollution companys like the people who may or may not essentially own the australian government (honestly look this stuff up its that bad)</p>
+<br>
+<figure>
+<img src="wildfire.jpg" class="all">
+<figcaption align="center" style ="font-family: Tahoma;">A wildfire near Fawnskin, California. Photo: David McNew</figcaption>
+</figure>
+<h1 align="center">EFFECTS CLIMATE CHANGE HAS ON THE WORLD</h1>
+<br>
+<p align="center">so climate change is very related to another topic global warming and global warming is known to cause things such as forest fires ,melt icebergs,raise sea levels,make flooding more common,make the avg. temp. of the earth more extreme killing species as a result as they were not meant to handle these different tempatures and so quickly as well also ignoring the fact it may cause drought as well. the effects of climate change is very bad so yeah </p>
+
+
+<ul><h1>RESOURCES</h1>
+
+    <a href="https://www.edf.org/" class="button">EDF</a>
+    <a href="https://climatekids.nasa.gov/climate-change-meaning/"class="button">Most Useful Resource/NASA </a>
+    <a href="https://climate.nasa.gov/effects/"class="button">More NASA</a>
+    <a href="https://www.climatehotmap.org/global-warming-effects/economy.html"class="button">Effects Global Warming Has On Us Economically</a>
+    <!--<a href="piano.html"></a>-->
+    <!--<a href="rickrolled.html">E</a>-->
+
+</ul>
+
+</div>
+
+<div class="parallax"></div>
+
+</div>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    function setting(){
+      document.body.style.backgroundColor= "black"
+      document.body.style.color="darkGray"
+    }
+    function setting2(){
+      document.body.style.backgroundColor="thistle"
+      document.body.style.color="black"
+
+    }
+
+    </script>
+
+</body>
+
+</html>

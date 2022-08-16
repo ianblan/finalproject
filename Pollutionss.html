@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+#navbar a {
+  float: left;
+  display: block;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#navbar a.active {
+  background-color: #333;
+  color: white;
+}
+.content {
+  padding: 16px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#setting{
+  position: absolute;
+  left:1100px;
+  background-color: #333;
+  border: none;
+  color: white;
+}
+#setting2{
+  position: absolute;
+  left:1260px;
+  background-color: #333;
+  border: none;
+  color: white;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    /* html { 
+    height: 100%;
+    } */
+    body{
+      font-family: 'Roboto Mono',MonoSpace;
+      overflow:hidden;
+      width: 100%;
+     
+      text-align: center;
+      margin: 0;
+      background-color: black ;
+      color: #a6a6a6;
+    }
+    .container {
+      padding-top: 2rem;
+      
+      top: 2rem;
+    }
+    a{
+      text-decoration: none;
+    }
+    .container h1{
+      color: white;
+      font-size: 190%;
+       overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .1em solid #a6a6a6; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em;
+      animation: 
+        typing 3.5s steps(10, end) forwards ,
+        blink-caret .75s step-end infinite ;
+        
+    }
+    @media (min-width: 1170px){
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 28% }
+    }
+    }
+    @media (max-width: 1169.99px){
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 37% }
+    }
+    }
+    @media (max-width: 969.99px){
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 45% }
+    }
+    }
+    @media (max-width: 769.99px){
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 70% }
+    }
+    }
+    @media (max-width: 469.99px){
+      .container h1{
+        letter-spacing: 80%; 
+        font-size: 150%;
+      }
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 85% }
+    }
+    }
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from { border-color: transparent }
+      to { border-color: transparent ;
+            opacity: 0; }
+      50% { border-color: white; }
+    }
+
+    
+  body{
+    background-color: blue;
+  }
+
+  p{
+    font-size: 20px;
+    color: white;
+  }
+
+  h3{
+    font-size: 30px;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  ol{
+    font-size: 20px;
+    color: white;
+  }
+  
+  .button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  h1 {
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+  }
+
+  
+</style>
+    
+</head>
+<body>
+
+    <div id="navbar">
+        <a class="active" href="climate_change.html">Home</a>
+        <a href="animals.html">Effects On Nature</a>
+        <a href="pollutions.html">Causes</a>
+        <a href="effect.html">Effects On Humanity</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="aboutus.html">About Us</a>
+        <button id="setting" onclick="setting()">dark-mode</button>
+      <button id="setting2" onclick="setting2()">light-mode</button>
+      </div>
+
+
+
+        <div class="container">
+            <h2>HEY I am Luis</h2>
+            <h1>What is pollution</h1>
+
+            <div align="center">
+                <img src="plastic pollution.jpg">
+                </div>
+            
+                <h2>What is Pollution?</h2>
+            
+                <a href="https://education.nationalgeographic.org/resource/pollution">more information</a>
+            <button onclick="typeWriter()">Click me</button>
+            
+            <p id="demo"></p>
+            
+            <script>
+            var i = 0;
+            var txt = 'Pollution is the introduction of harmful materials into the environment. These harmful materials are called pollutants. Pollutants can be natural, such as volcanic ash. They can also be created by human activity, such as trash or runoff produced by factories. Pollutants damage the quality of air, water, and land The majority of these pollutants are emitted through human activities like burning fossil fuels, vehicle exhaust fumes and emissions from agriculture and industry  Air pollution, exposure to lead and other chemicals, and hazardous wastes including exposure to improper e-waste disposal, cause debilitating and fatal illnesses, create harmful living conditions, and destroy ecosystems'
+            var speed = 50;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            </script>
+                
+                <a href="https://en.wikipedia.org/wiki/Pollution" class="button"> Learn More About Pollution</a>
+            
+                <h3>Types of Pollution</h3>
+                <ol>
+                <li>Air Pollution</li>
+                <li>Water Pollution </li>
+                <li>Soil Contamination</li> 
+                <li>Plastic Pollution</li>         
+                <li>Thermal Pollution</li> 
+                </ol>
+            
+                <h3>Air Pollution</h3>
+                <p>Air pollution is one of the UK's and the world's biggest killers. Breathing in air pollution can increase the risk of heart disease and stroke</p>
+                <p>Air pollution is caused by solid and liquid particles and certain gases that are suspended in the air. These particles and gases can come from car and truck exhaust, factories, dust, pollen, mold spores, volcanoes and wildfires. The solid and liquid particles suspended in our air are called aerosols</p>
+                <p>The Burning of Fossil Fuels.</p>
+            
+                <div class="container" align="center" id="soke">
+                    <img src="smoke.jpg" alt="Avatar" class="image" >
+                    <div class="overlay">
+                      <div class="text">we do not want smoke around the world beacuse we will not be able to see</div>
+                    </div>
+                  </div>
+            
+                <h3>Water Pollution</h3>
+                <p>Water pollution can be damaging to the economy as it can be expensive to treat and prevent contamination. Waste that does not break down quickly accumulates in the Earth waters and eventually makes its way to the oceans</p>
+                <p>The location of the pollution is important in determining how much the clean-up will cost. If the contamination is in an area that is easy to get to, then the clean up cost will be cheaper</p>
+                <p>Suspended particles in freshwater reduces the quality of drinking water for humans and the aquatic environment for marine life. Suspended particles can often reduce the amount of sunlight penetrating the water, disrupting the growth of photosynthetic plants and micro-organisms</p>
+            
+                <div class="container">
+                    <img src="water.jpg" alt="Avatar" class="image" id="soke>
+                    <div class="overlay">
+                      <div class="text">Water is so dirty that we will not about drink and take a bath</div>
+                    </div>
+                  </div>
+            
+                <h3>Soil Contamination</h3>
+                <p>Excessive industrial activity</p>
+                <p>Poor management or inefficient disposal of waste</p>
+                <p>Agriculture (excessive/improper use of pesticides)</p>
+            
+                <div class="container" align="center>
+                    <img src="soil contamination.jpg" alt="Avatar" class="image" id="soke>
+                    <div class="overlay">
+                      <div class="text">We do want our land dirty so our animals can live</div>
+                    </div>
+                  </div>
+            
+                <h3>Plastic Pollution</h3>
+                <p>Overusing of Single Use Plastic Items - Plastics are inexpensive items</p>
+                <p>Plastic Products and Toys - Increasing number of products and toys are selecting plastic to be the major material component</p>
+                <p>PET Plastic Bottles - Plastic Bottles are one of the most common plastic pollutants</p>
+            
+                <div class="container">
+                    <img src="trash.jpg" alt="Avatar" class="image" id="soke>
+                    <div class="overlay">
+                      <div class="text">We do not want trash in our water beacuse we want our animals to live</div>
+                    </div>
+                  </div>
+            
+                <h3>Thermal Pollution</h3>
+                <p>Water as a Cooling Agent in Power, Manufacturing and Industrial Plants. Production and Manufacturing plants are the biggest sources of thermal pollution</p>
+                <p>Runoff From Paved Surfaces</p>
+                <p>Natural Causes</p>
+            
+             
+                <div class="container">
+                    <img src="thermal pollution.jpg" alt="Avatar" class="image" id="soke>
+                    <div class="overlay">
+                      <div class="text">We do not want smoke around the world</div>
+                    </div>
+                  </div>
+            
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GEHOlmcJAEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-XKdODELf-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+          
+            <script>
+
+window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    function setting(){
+      document.body.style.backgroundColor= "black"
+      document.body.style.color="darkGray"
+    }
+    function setting2(){
+      document.body.style.backgroundColor="thistle"
+      document.body.style.color="black"
+    }
+
+let w = 1400;
+let h = 1400;
+let scale = 20;
+let rows = (h / scale);
+let cols = (w / scale);
+let mountains = [];
+let fly = 0;
+
+function setup() {
+    createCanvas(windowWidth, windowHeight, WEBGL);
+    background(0);
+}
+
+function draw() {
+    orbitControl();
+    background(0);
+    fly += .05;
+
+    let yOff = fly;
+
+    for (let i = 0; i < rows; i++) {
+        mountains[i] = [];
+        let xOff = 0;
+        for (let j = 0; j < cols; j++) {
+            mountains[i][j] = map(noise(xOff, yOff), 0, 1, -40, 60);
+            xOff += 0.3;
+        }
+        yOff += 0.3;
+    }
+
+    fill(166);
+    
+    rotateX(PI / 3);
+    translate(-w / 2, -h / 2);
+
+    for (let i = 0; i < rows; i++) {
+        beginShape(TRIANGLE_STRIP);
+        for (let j = 0; j < cols; j++) {
+            vertex(j * scale, i * scale, mountains[j][i]);
+            vertex(j * scale, (i + 1) * scale, mountains[j][i]);
+        }
+        endShape();
+    }
+}
+setInterval(setup, 0.10);
+
+
+            </script>
+    
+</body>
+</html>

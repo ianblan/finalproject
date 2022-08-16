@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <link rel ="stylesheet" href = "aboutus.css">
+</head>
+<body>
+    <div id="navbar">
+        <a class="active" href="climate_change.html">Home</a>
+        <a href="pollutions.html">Causes</a>
+        <a href="animals.html">Effects On Nature</a>
+        <a href="effect.html">Effects On Humanity</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="aboutus.html">About Us</a>
+        <button id="setting" onclick="setting()">dark-mode</button>
+      <button id="setting2" onclick="setting2()">light-mode</button>
+      </div>
+
+      <div class="content">
+        </div>
+
+    <div>
+        <h1 id="au">About Us</h1>
+        <img src="us.jpg" width="20%" height="20%"  class="center"  class="center">
+        <h1>April Garcia</h1>
+        <img src="April.jpg" width="20%" height="20%"  class="center">
+        <p>My name is April. My pronouns are they/them.Thats it. I'm from The Laboratory School of Finance and Technology.
+           I was responsible for the Effects page.</p>
+           
+    </div>
+
+    <div>
+        <h1>
+            Ian Blando
+            
+        </h1>
+        <img src="Ian.jpg" width="20%" height="20%" class="center">
+        <p>Hello my name is ian and i am 13 years old. i live in queens. I am going to academy of finance and enterprise. I chose Climate Change as a topic beacause it kinda matters a lot and i dont want the world to get warmer as I have a disdain towards things being a hotter temperature than warm.
+        </p>
+
+      
+    </div>
+
+    <div>
+        <h1>
+            Luis Delgado
+        </h1>
+        <img src="luis.jpg" width="20%" height="20%"  class="center">
+        <p>Hello  I wrote pollution because for me it looks fun.</p>
+        <ol>
+          <li>I was born August 23, 2011</li>
+
+        </ol>
+    </div>
+
+    <div>
+        <h1>Sheila Mendez</h1>
+        <img src="sheila.jpg" width="20%" height="20%"  class="center">
+        <p>My name is Sheila. I chose the topic because it matters.</p>
+        <ol>
+          <li>Born In August 28, 2010</li>
+          <li> I am the going to the school ADS.</li>
+        </ol>
+    </div>
+
+    <h1>Yavii Flores</h1>
+        <P>My name is Yavii and I am 13 years old. I chose the topic Climate Change becuase it matters.</P>
+
+
+
+        <script>
+
+            window.onscroll = function() {myFunction()};
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+                function setting(){
+                  document.body.style.backgroundColor= "black"
+                  document.body.style.color="darkGray"
+                }
+                function setting2(){
+                  document.body.style.backgroundColor="thistle"
+                  document.body.style.color="black"
+                }
+                
+            
+            
+                </script>
+            
+                
+            
+
+    
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
